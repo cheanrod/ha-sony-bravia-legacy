@@ -1,0 +1,57 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Sony Bravia (2011–2012)",
+        "description": "Verbindet einen Bravia-Fernseher aus den Jahren 2011 oder 2012. Neuere Modelle (ab 2013) unterstützt stattdessen die eingebaute Integration Sony Bravia TV.",
+        "data": {
+          "host": "Host",
+          "name": "Name",
+          "mac": "MAC-Adresse (optional)"
+        },
+        "data_description": {
+          "host": "IP-Adresse des Fernsehers. Vergeben Sie ihm im Router eine feste IP-Adresse.",
+          "mac": "Nötig, um den Fernseher einzuschalten, da Geräte von 2012 im Standby meist nicht im Netzwerk erreichbar sind. Zusätzlich muss am Fernseher Wake-on-LAN bzw. Remote Start aktiviert sein."
+        }
+      },
+      "register": {
+        "title": "Fernseher in den Registrierungsmodus versetzen",
+        "description": "Öffnen Sie am Fernseher Einstellungen > Netzwerk > Heimnetzwerk-Einstellungen > Fernbedienungsgerät / Renderer und wählen Sie Registrierung (die Bezeichnungen variieren je nach Modell). Senden Sie dann ab."
+      },
+      "pin": {
+        "title": "PIN eingeben",
+        "description": "Geben Sie die PIN ein, die der Fernseher anzeigt.",
+        "data": {
+          "pin": "PIN"
+        }
+      },
+      "confirm": {
+        "title": "Am Fernseher bestätigen",
+        "description": "Bestätigen Sie die Anfrage von \"Home Assistant\" am Fernseher mit der Fernbedienung und senden Sie dann ab."
+      },
+      "reauth_confirm": {
+        "title": "Erneut registrieren",
+        "description": "Der Fernseher akzeptiert Home Assistant nicht mehr. Schalten Sie den Fernseher ein und senden Sie ab, um ihn erneut zu registrieren."
+      }
+    },
+    "error": {
+      "cannot_connect": "Der Fernseher ist nicht erreichbar. Prüfen Sie, ob er eingeschaltet und die IP-Adresse korrekt ist.",
+      "invalid_mac": "Ungültige MAC-Adresse.",
+      "registration_rejected": "Der Fernseher hat die Registrierung abgelehnt. Versetzen Sie ihn in den Registrierungsmodus und versuchen Sie es erneut.",
+      "invalid_pin": "Falsche PIN.",
+      "not_confirmed": "Der Fernseher lehnt Home Assistant weiterhin ab. Bestätigen Sie die Anfrage am Fernseher oder prüfen Sie die Liste der registrierten Fernbedienungsgeräte.",
+      "unknown": "Unerwarteter Fehler, siehe Protokoll."
+    },
+    "abort": {
+      "already_configured": "Dieser Fernseher ist bereits eingerichtet.",
+      "reauth_successful": "Erneute Registrierung erfolgreich."
+    }
+  },
+  "entity": {
+    "remote": {
+      "remote": {
+        "name": "Fernbedienung"
+      }
+    }
+  }
+}

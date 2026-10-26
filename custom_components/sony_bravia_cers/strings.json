@@ -1,0 +1,57 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Sony Bravia (2011–2012)",
+        "description": "Connect a Bravia TV from 2011 or 2012. Newer models (2013+) are supported by the built-in Sony Bravia TV integration instead.",
+        "data": {
+          "host": "Host",
+          "name": "Name",
+          "mac": "MAC address (optional)"
+        },
+        "data_description": {
+          "host": "IP address of the TV. Give it a fixed IP in your router.",
+          "mac": "Needed to switch the TV on, because 2012 sets drop off the network in standby. Wake-on-LAN / remote start must also be enabled on the TV."
+        }
+      },
+      "register": {
+        "title": "Put the TV in registration mode",
+        "description": "On the TV, open Settings > Network > Home Network Setup > Remote Device / Renderer and choose Registration (wording varies by model). Then submit."
+      },
+      "pin": {
+        "title": "Enter PIN",
+        "description": "Enter the PIN shown on the TV.",
+        "data": {
+          "pin": "PIN"
+        }
+      },
+      "confirm": {
+        "title": "Confirm on the TV",
+        "description": "Accept the request from \"Home Assistant\" on the TV with your remote, then submit."
+      },
+      "reauth_confirm": {
+        "title": "Register again",
+        "description": "The TV no longer accepts Home Assistant. Switch the TV on and submit to register again."
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the TV. Make sure it is switched on and the IP is correct.",
+      "invalid_mac": "Invalid MAC address.",
+      "registration_rejected": "The TV rejected the registration. Put it in registration mode and try again.",
+      "invalid_pin": "Wrong PIN.",
+      "not_confirmed": "The TV still rejects Home Assistant. Accept the prompt on the TV, or check the list of registered remote devices.",
+      "unknown": "Unexpected error, see the log."
+    },
+    "abort": {
+      "already_configured": "This TV is already configured.",
+      "reauth_successful": "Registered again successfully."
+    }
+  },
+  "entity": {
+    "remote": {
+      "remote": {
+        "name": "Remote"
+      }
+    }
+  }
+}

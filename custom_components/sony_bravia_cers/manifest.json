@@ -1,0 +1,12 @@
+{
+  "domain": "sony_bravia_cers",
+  "name": "Sony Bravia (2011-2012)",
+  "codeowners": ["@cheanrod"],
+  "config_flow": true,
+  "documentation": "https://github.com/cheanrod/ha-sony-bravia-legacy",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/cheanrod/ha-sony-bravia-legacy/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}
